@@ -1,0 +1,39 @@
+{
+  "HELLO": "欢迎",
+  "Home": {
+    "Title": "Mobile CRM"
+  },
+  "Map": {
+    "Title": "地图"
+  },
+  "Setting": {
+    "Title": "设置",
+    "General": "通用",
+    "Language": "语言",
+    "Network": "网络",
+    "Gesture": "手势",
+    "TouchID": "指纹",
+    "LocalData": "本地缓存",
+    "Version": "版本",
+    "Logout": "登出"
+  },
+  "SettingLanguage": {
+    "Title": "语言"
+  },
+  "SettingNetwork": {
+    "Title": "网络",
+    "Wifi": "无线局域网",
+    "Cell": "蜂窝移动数据"
+  },
+  "SettingData": {
+    "Title": "本地缓存",
+    "SyncTime": "最后同步时间",
+    "ClearData": "清空本地缓存"
+  },
+  "Logout": {
+    "Confirm": "确认",
+    "ConfirmMessage": "确认是否登出?",
+    "ConfirmCancel": "取消",
+    "ConfirmOK": "确认"
+  }
+}

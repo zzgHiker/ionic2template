@@ -1,0 +1,67 @@
+// http://ionicframework.com/docs/v2/theming/
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+/**
+Icons Definition
+ */
+@font-face {
+  font-family: "font-awesome";
+  src: url('../assets/iconfont-awesome/fontawesome-webfont.eot?t=1479788302347'); /* IE9*/
+  src: url('../assets/iconfont-awesome/fontawesome-webfont.eot?t=1479788302347#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../assets/iconfont-awesome/fontawesome-webfont.woff?t=1479788302347') format('woff'), /* chrome, firefox */
+  url('../assets/iconfont-awesome/fontawesome-webfont.ttf?t=1479788302347') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../assets/iconfont-awesome/fontawesome-webfont.svg?t=1479788302347#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.font-awesome {
+
+  font-family: "font-awesome" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin makeIcon($arg, $val) {
+  .ion-ios-#{$arg}:before,
+  .ion-ios-#{$arg}-circle:before,
+  .ion-ios-#{$arg}-circle-outline:before,
+  .ion-ios-#{$arg}-outline:before,
+  .ion-md-#{$arg}:before,
+  .ion-md-#{$arg}-circle:before,
+  .ion-md-#{$arg}-circle-outline:before,
+  .ion-md-#{$arg}-outline:before {
+    @extend .font-awesome;
+    content: $val;
+    font-size: 26px;
+  }
+}
+
+$font-awesome-icons: (
+        "aaa" : "bb"
+);
+
+@mixin makeIcons() {
+  @each $icon-name, $icon-value in $font-awesome-icons {
+    @include makeIcon($icon-name, $icon-value);
+  }
+
+}

@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{ 'Setting.Title' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item-group>
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="assets/img/avatar.png">
+      </ion-avatar>
+      <h2>{{user.name}}</h2>
+      <p>{{user.title}}</p>
+    </ion-item>
+  </ion-item-group>
+
+  <!--通用设置-->
+  <ion-item-group>
+    <ion-item-divider color="light">{{ 'Setting.General' | translate }}</ion-item-divider>
+    <!--语言设置-->
+    <button (click)="navTo('language')" ion-item>
+      <ion-icon name="globe" item-left></ion-icon>
+      {{ 'Setting.Language' | translate }}
+    </button>
+    <!--网路设置-->
+    <button (click)="navTo('network')" ion-item>
+      <ion-icon name="wifi" item-left></ion-icon>
+      {{ 'Setting.Network' | translate }}
+    </button>
+    <!--手势设置-->
+    <button ion-item>
+      <ion-icon name="keypad" item-left></ion-icon>
+      {{ 'Setting.Gesture' | translate }}
+    </button>
+    <!--指纹开关-->
+    <ion-item *ngIf="touchIDAvailable">
+      <ion-icon name="finger-print" item-left></ion-icon>
+      <ion-label> {{ 'Setting.TouchID' | translate }}</ion-label>
+      <ion-toggle checked="false"></ion-toggle>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-item-group>
+    <ion-item-divider color="light"></ion-item-divider>
+    <!--地图-->
+    <button (click)="navTo('map')" ion-item>
+      <ion-icon class="fa fa-map-marker"  item-left></ion-icon>
+      <ion-label> {{ 'Map.Title' | translate }}</ion-label>
+    </button>
+  </ion-item-group>
+
+  <!--应用设置-->
+  <ion-item-group>
+    <ion-item-divider color="light"></ion-item-divider>
+    <!--数据-->
+    <button (click)="navTo('data')" ion-item>
+      <ion-icon name="logo-buffer" item-left></ion-icon>
+
+      <ion-label>{{ 'Setting.LocalData' | translate }}</ion-label>
+    </button>
+    <!--版本-->
+    <ion-item>
+      <ion-icon name="cloud" item-left></ion-icon>
+      <ion-label> {{ 'Setting.Version' | translate }}</ion-label>
+      <ion-note item-right> {{ appVersion }}</ion-note>
+    </ion-item>
+  </ion-item-group>
+  <br>
+  <!--用户登出-->
+  <div padding>
+    <button (click)="logout()" ion-button block color="danger">{{ 'Setting.Logout' | translate }}</button>
+  </div>
+</ion-content>

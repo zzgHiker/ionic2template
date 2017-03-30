@@ -1,0 +1,26 @@
+<!--
+  Generated template for the SettingLanguage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>{{ 'SettingLanguage.Title' | translate }}</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-item-group radio-group>
+        <ion-item *ngFor="let lang of languages">
+            <ion-label>{{lang.text}}</ion-label>
+            <ion-radio (click)="changeLanguage(lang.value)"
+                       [value]="lang.value"
+                       [checked]="lang.value == currentLanguage"></ion-radio>
+        </ion-item>
+    </ion-item-group>
+
+</ion-content>

@@ -1,0 +1,39 @@
+{
+  "HELLO": "Hello",
+  "Home": {
+    "Title": "Mobile CRM"
+  },
+  "Map": {
+    "Title": "Map"
+  },
+  "Setting": {
+    "Title": "Settings",
+    "General": "General",
+    "Language": "Language",
+    "Network": "Network",
+    "Gesture": "Gesture",
+    "TouchID": "Touch ID",
+    "LocalData": "Local Data",
+    "Version": "Version",
+    "Logout": "Logout"
+  },
+  "SettingLanguage": {
+    "Title": "Language"
+  },
+  "SettingNetwork": {
+    "Title": "Network",
+    "Wifi": "Wi-Fi",
+    "Cell": "Cell Signal"
+  },
+  "SettingData": {
+    "Title": "Local Data",
+    "SyncTime": "Sync Time",
+    "ClearData": "Clear Local Data"
+  },
+  "Logout": {
+    "Confirm": "Confirm",
+    "ConfirmMessage": "Confirm logout?",
+    "ConfirmCancel": "Cancel",
+    "ConfirmOK": "OK"
+  }
+}
